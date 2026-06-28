@@ -182,9 +182,10 @@ if st.button('Calcular Risco', type="primary", use_container_width=True):
     
     try:
         # --- PREVISÃO ---
-        # O pipeline 'model' cuida de todo o pré-processamento (StandardScaler e OneHotEncoder)
-        predicoes_numericas = model.predict(df_combinado)
-        probabilidades = model.predict_proba(df_combinado)
+        # br/delegacia nao estao no pipeline treinado (alta cardinalidade removida)
+        df_pred = df_combinado.drop(['br', 'delegacia'], axis=1)
+        predicoes_numericas = model.predict(df_pred)
+        probabilidades = model.predict_proba(df_pred)
         
         # Pega os resultados individuais
         risco_origem = risk_mapping.get(predicoes_numericas[0], "Erro")
