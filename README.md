@@ -1,3 +1,5 @@
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-abs--cargo--risk.streamlit.app-FF4B4B?logo=streamlit&logoColor=white)](https://abs-cargo-risk.streamlit.app)
+
 # `machine-learning-cargo-risk: Previsao de Risco de Roubo de Cargas`
 
 > Random Forest treinado em dados reais de roubos de carga no Brasil para classificacao de risco (Alto/Medio/Baixo) + app Streamlit de inferencia em producao com geocodificacao. Sprint 3 e 4, FIAP 2025.
