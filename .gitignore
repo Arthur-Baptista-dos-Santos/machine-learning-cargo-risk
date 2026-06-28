@@ -3,8 +3,6 @@
 .venv/
 .DS_Store
 secrets.h
-*.pkl
 *.db
 *.mp4
 *.avi
-
